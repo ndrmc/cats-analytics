@@ -1,5 +1,6 @@
 package org.cats.analytics.resource.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,8 +11,8 @@ import java.util.Date;
 @Document
 public class GiftCertificate {
     @Id
-    private Long id;
-    private Long originalId;
+    private ObjectId _id;
+    private Long recordId;
     @Indexed
     private String referenceNo;
     private Date giftDate;
@@ -40,25 +41,26 @@ public class GiftCertificate {
     private Long currencyId;
     private String currencyName;
     private Long commodityId;
+    @Indexed
     private String commodityName;
     private String createdDate;
     private Long createdBy;
     private String createdByUserName;
 
-    public Long getId() {
-        return id;
+    public ObjectId get_id() {
+        return _id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void set_id(ObjectId _id) {
+        this._id = _id;
     }
 
-    public Long getOriginalId() {
-        return originalId;
+    public Long getRecordId() {
+        return recordId;
     }
 
-    public void setOriginalId(Long originalId) {
-        this.originalId = originalId;
+    public void setRecordId(Long recordId) {
+        this.recordId = recordId;
     }
 
     public String getReferenceNo() {
