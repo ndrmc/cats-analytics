@@ -1,4 +1,4 @@
-package org.cats.catsanalytics;
+package org.cats.analytics;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
