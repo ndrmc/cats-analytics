@@ -1,6 +1,7 @@
 package org.cats.analytics.resource.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
@@ -10,10 +11,13 @@ import java.util.Date;
 public class GiftCertificate {
     @Id
     private Long id;
+    private Long originalId;
+    @Indexed
     private String referenceNo;
     private Date giftDate;
     private String vessel;
     private Long organizationId;
+    @Indexed
     private String organizationName;
     private Date eta;
     private Long programId;
@@ -47,6 +51,14 @@ public class GiftCertificate {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getOriginalId() {
+        return originalId;
+    }
+
+    public void setOriginalId(Long originalId) {
+        this.originalId = originalId;
     }
 
     public String getReferenceNo() {
