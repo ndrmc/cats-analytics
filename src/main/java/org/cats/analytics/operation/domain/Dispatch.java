@@ -1,5 +1,6 @@
 package org.cats.analytics.operation.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,46 +10,55 @@ import java.util.List;
 @Document
 public class Dispatch {
     @Id
-    private String id;
+    private ObjectId id;
+    private Long dispatchId;
     private String ginNo;
-    private int operationId;
+    private Long operationId;
     private String requisitionNumber;
     private Date dispatchDate;
-    private int fdpId;
-    private int woredaId;
-    private int zoneId;
-    private int regionId;
+    private Long fdpId;
+    private Long woredaId;
+    private Long zoneId;
+    private Long regionId;
     private String fdpName;
     private String woredaName;
     private String zoneName;
     private String regionName;
     private String weightBridgeTicketNumber;
-    private int transporterId;
+    private Long transporterId;
     private String transporterName;
     private String plateNumber;
     private String trailerPlateNumber;
     private String driverName;
     private String remark;
     private Boolean draft;
-    private int createdBy;
-    private int modifiedBy;
+    private Long createdBy;
+    private Long modifiedBy;
     private Boolean deleted;
     private Date deletedAt;
     private Date createdAt;
     private Date updatedAt;
-    private int hubId;
+    private Long hubId;
     private String hubName;
-    private int warehouseId;
+    private Long warehouseId;
     private String warehouseName;
     private String dispatchDateEc;
     private List<DispatchItem> dispatchItems;
 
-    public String getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
+    }
+
+    public Long getDispatchId() {
+        return dispatchId;
+    }
+
+    public void setDispatchId(Long dispatchId) {
+        this.dispatchId = dispatchId;
     }
 
     public String getGinNo() {
@@ -59,11 +69,11 @@ public class Dispatch {
         this.ginNo = ginNo;
     }
 
-    public int getOperationId() {
+    public Long getOperationId() {
         return operationId;
     }
 
-    public void setOperationId(int operationId) {
+    public void setOperationId(Long operationId) {
         this.operationId = operationId;
     }
 
@@ -83,35 +93,35 @@ public class Dispatch {
         this.dispatchDate = dispatchDate;
     }
 
-    public int getFdpId() {
+    public Long getFdpId() {
         return fdpId;
     }
 
-    public void setFdpId(int fdpId) {
+    public void setFdpId(Long fdpId) {
         this.fdpId = fdpId;
     }
 
-    public int getWoredaId() {
+    public Long getWoredaId() {
         return woredaId;
     }
 
-    public void setWoredaId(int woredaId) {
+    public void setWoredaId(Long woredaId) {
         this.woredaId = woredaId;
     }
 
-    public int getZoneId() {
+    public Long getZoneId() {
         return zoneId;
     }
 
-    public void setZoneId(int zoneId) {
+    public void setZoneId(Long zoneId) {
         this.zoneId = zoneId;
     }
 
-    public int getRegionId() {
+    public Long getRegionId() {
         return regionId;
     }
 
-    public void setRegionId(int regionId) {
+    public void setRegionId(Long regionId) {
         this.regionId = regionId;
     }
 
@@ -155,11 +165,11 @@ public class Dispatch {
         this.weightBridgeTicketNumber = weightBridgeTicketNumber;
     }
 
-    public int getTransporterId() {
+    public Long getTransporterId() {
         return transporterId;
     }
 
-    public void setTransporterId(int transporterId) {
+    public void setTransporterId(Long transporterId) {
         this.transporterId = transporterId;
     }
 
@@ -211,19 +221,19 @@ public class Dispatch {
         this.draft = draft;
     }
 
-    public int getCreatedBy() {
+    public Long getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(int createdBy) {
+    public void setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
     }
 
-    public int getModifiedBy() {
+    public Long getModifiedBy() {
         return modifiedBy;
     }
 
-    public void setModifiedBy(int modifiedBy) {
+    public void setModifiedBy(Long modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
@@ -259,11 +269,11 @@ public class Dispatch {
         this.updatedAt = updatedAt;
     }
 
-    public int getHubId() {
+    public Long getHubId() {
         return hubId;
     }
 
-    public void setHubId(int hubId) {
+    public void setHubId(Long hubId) {
         this.hubId = hubId;
     }
 
@@ -275,11 +285,11 @@ public class Dispatch {
         this.hubName = hubName;
     }
 
-    public int getWarehouseId() {
+    public Long getWarehouseId() {
         return warehouseId;
     }
 
-    public void setWarehouseId(int warehouseId) {
+    public void setWarehouseId(Long warehouseId) {
         this.warehouseId = warehouseId;
     }
 

@@ -30,13 +30,16 @@ public class Operation {
     private String status;
     private Date createdAt;
     private Date updatedAt;
-    private int createdById;
+    private Long createdById;
     private String createdByName;
-    private int modifiedById;
+    private Long modifiedById;
     private String modifiedByName;
     private Date deletedAt;
     private List<RationItem> rationItems;
+    private List<RegionalRequest> regionalRequests;
+    private List<Requisition> requisitions;
     private List<Dispatch> dispatches;
+    private List<Delivery> deliveries;
 
     public ObjectId getId() {
         return id;
@@ -198,11 +201,11 @@ public class Operation {
         this.updatedAt = updatedAt;
     }
 
-    public int getCreatedById() {
+    public Long getCreatedById() {
         return createdById;
     }
 
-    public void setCreatedById(int createdById) {
+    public void setCreatedById(Long createdById) {
         this.createdById = createdById;
     }
 
@@ -214,11 +217,11 @@ public class Operation {
         this.createdByName = createdByName;
     }
 
-    public int getModifiedById() {
+    public Long getModifiedById() {
         return modifiedById;
     }
 
-    public void setModifiedById(int modifiedById) {
+    public void setModifiedById(Long modifiedById) {
         this.modifiedById = modifiedById;
     }
 
@@ -246,11 +249,35 @@ public class Operation {
         this.rationItems = rationItems;
     }
 
+    public List<RegionalRequest> getRegionalRequests() {
+        return regionalRequests;
+    }
+
+    public void setRegionalRequests(List<RegionalRequest> regionalRequests) {
+        this.regionalRequests = regionalRequests;
+    }
+
+    public List<Requisition> getRequisitions() {
+        return requisitions;
+    }
+
+    public void setRequisitions(List<Requisition> requisitions) {
+        this.requisitions = requisitions;
+    }
+
     public List<Dispatch> getDispatches() {
         return dispatches;
     }
 
     public void setDispatches(List<Dispatch> dispatches) {
         this.dispatches = dispatches;
+    }
+
+    public List<Delivery> getDeliveries() {
+        return deliveries;
+    }
+
+    public void setDeliveries(List<Delivery> deliveries) {
+        this.deliveries = deliveries;
     }
 }

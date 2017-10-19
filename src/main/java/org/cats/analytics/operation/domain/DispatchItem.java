@@ -1,50 +1,53 @@
 package org.cats.analytics.operation.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class DispatchItem {
     @Id
-    private String id;
-    private int dispatchId;
-    private int commodityCategoryId;
+    private ObjectId id;
+    private Long dispatchId;
+    private Long commodityCategoryId;
     private String commodityCategoryName;
-    private int commodityId;
+    private Long commodityId;
     private String commodityName;
-    private float quantity;
-    private int projectId;
+    private BigDecimal quantity;
+    private BigDecimal quantityMT;
+    private Long projectId;
     private String projectName;
-    private int organizationId;
+    private Long organizationId;
     private String organizationName;
-    private int created_by;
-    private int modified_by;
+    private Long created_by;
+    private Long modified_by;
     private Boolean deleted;
     private Date deleted_at;
     private Date created_at;
     private Date updated_at;
 
-    public String getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
-    public int getDispatchId() {
+    public Long getDispatchId() {
         return dispatchId;
     }
 
-    public void setDispatchId(int dispatchId) {
+    public void setDispatchId(Long dispatchId) {
         this.dispatchId = dispatchId;
     }
 
-    public int getCommodityCategoryId() {
+    public Long getCommodityCategoryId() {
         return commodityCategoryId;
     }
 
-    public void setCommodityCategoryId(int commodityCategoryId) {
+    public void setCommodityCategoryId(Long commodityCategoryId) {
         this.commodityCategoryId = commodityCategoryId;
     }
 
@@ -56,11 +59,11 @@ public class DispatchItem {
         this.commodityCategoryName = commodityCategoryName;
     }
 
-    public int getCommodityId() {
+    public Long getCommodityId() {
         return commodityId;
     }
 
-    public void setCommodityId(int commodityId) {
+    public void setCommodityId(Long commodityId) {
         this.commodityId = commodityId;
     }
 
@@ -72,19 +75,27 @@ public class DispatchItem {
         this.commodityName = commodityName;
     }
 
-    public float getQuantity() {
+    public BigDecimal getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(float quantity) {
+    public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
     }
 
-    public int getProjectId() {
+    public BigDecimal getQuantityMT() {
+        return quantityMT;
+    }
+
+    public void setQuantityMT(BigDecimal quantityMT) {
+        this.quantityMT = quantityMT;
+    }
+
+    public Long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(int projectId) {
+    public void setProjectId(Long projectId) {
         this.projectId = projectId;
     }
 
@@ -96,11 +107,11 @@ public class DispatchItem {
         this.projectName = projectName;
     }
 
-    public int getOrganizationId() {
+    public Long getOrganizationId() {
         return organizationId;
     }
 
-    public void setOrganizationId(int organizationId) {
+    public void setOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
     }
 
@@ -112,19 +123,19 @@ public class DispatchItem {
         this.organizationName = organizationName;
     }
 
-    public int getCreated_by() {
+    public Long getCreated_by() {
         return created_by;
     }
 
-    public void setCreated_by(int created_by) {
+    public void setCreated_by(Long created_by) {
         this.created_by = created_by;
     }
 
-    public int getModified_by() {
+    public Long getModified_by() {
         return modified_by;
     }
 
-    public void setModified_by(int modified_by) {
+    public void setModified_by(Long modified_by) {
         this.modified_by = modified_by;
     }
 

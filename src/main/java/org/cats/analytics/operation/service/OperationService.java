@@ -1,5 +1,6 @@
 package org.cats.analytics.operation.service;
 
+import org.bson.types.ObjectId;
 import org.cats.analytics.operation.domain.Operation;
 import org.cats.analytics.operation.repository.OperationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class OperationService {
         return repository.findAll();
     }
 
-    public Operation findByOperationId(Integer id) {
+    public Operation findByOperationId(Long id) {
         return repository.findByOperationId(id);
     }
 
